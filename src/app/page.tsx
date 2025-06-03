@@ -8,14 +8,62 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState('projects');
 
   const skills = [
-    { name: "Flutter", level: 90, color: "bg-blue-500" },
-    { name: "ReactJS", level: 85, color: "bg-cyan-500" },
-    { name: "NestJS", level: 85, color: "bg-red-500" },
-    { name: "NextJS", level: 80, color: "bg-gray-800" },
-    { name: "ExpressJS", level: 80, color: "bg-green-500" },
-    { name: "AWS/GCP", level: 75, color: "bg-orange-500" },
-    { name: "SQL/NoSQL", level: 75, color: "bg-purple-500" },
-    { name: "Tailwind CSS", level: 85, color: "bg-teal-500" }
+    { 
+      name: "Flutter", 
+      level: 90, 
+      color: "from-blue-400 to-blue-600",
+      icon: "🦋",
+      description: "Desarrollo móvil multiplataforma"
+    },
+    { 
+      name: "ReactJS", 
+      level: 85, 
+      color: "from-cyan-400 to-cyan-600",
+      icon: "⚛️",
+      description: "Interfaces de usuario modernas"
+    },
+    { 
+      name: "NestJS", 
+      level: 85, 
+      color: "from-red-400 to-red-600",
+      icon: "🪺",
+      description: "Backend escalable y robusto"
+    },
+    { 
+      name: "NextJS", 
+      level: 80, 
+      color: "from-gray-600 to-gray-800",
+      icon: "▲",
+      description: "Aplicaciones web full-stack"
+    },
+    { 
+      name: "ExpressJS", 
+      level: 80, 
+      color: "from-green-400 to-green-600",
+      icon: "🚀",
+      description: "APIs REST y servicios web"
+    },
+    { 
+      name: "AWS/GCP", 
+      level: 75, 
+      color: "from-orange-400 to-orange-600",
+      icon: "☁️",
+      description: "Despliegue en la nube"
+    },
+    { 
+      name: "SQL/NoSQL", 
+      level: 75, 
+      color: "from-purple-400 to-purple-600",
+      icon: "🗄️",
+      description: "Gestión de bases de datos"
+    },
+    { 
+      name: "Tailwind CSS", 
+      level: 85, 
+      color: "from-teal-400 to-teal-600",
+      icon: "🎨",
+      description: "Diseño y estilos modernos"
+    }
   ];
 
   const experience = [
@@ -53,31 +101,71 @@ export default function Home() {
 
   const projects = [
     {
-      title: "Asistente con Gemini",
-      tech: "Flutter, NestJS",
-      description: "Aplicación móvil con IA integrada para asistencia personal",
-      classes: "from-cyan-900 via-cyan-700 to-cyan-500 border-cyan-900",
-      col: "col-span-2"
+      id: 1,
+      title: "Asistente con Gemini AI",
+      tech: ["Flutter", "NestJS", "Google AI", "BLoC"],
+      description: "Aplicación móvil inteligente que utiliza IA de Google Gemini para proporcionar asistencia personal avanzada con procesamiento de lenguaje natural.",
+      features: ["Chat con IA", "Reconocimiento de voz", "Análisis de texto", "Multiplataforma"],
+      status: "Completado",
+      year: "2024",
+      category: "Mobile App",
+      githubUrl: "https://github.com/DiegoYepes05/Chat_Flutter_IA", // Reemplaza con tu URL real
+      liveUrl: "" // Si tienes demo en vivo
     },
     {
-      title: "Portfolio Personal",
-      tech: "Next.js",
-      description: "CV interactivo y responsive",
-      classes: "from-orange-400 via-orange-300 to-white border-orange-400",
-      col: "col-span-1"
-    },
-    {
+      id: 2,
       title: "E-commerce Platform",
-      tech: "Next.js, Node.js, MongoDB",
-      description: "Plataforma completa de comercio electrónico",
-      classes: "from-[#663399] via-[#8e44ad] to-white border-[#663399]",
-      col: "col-span-1"
+      tech: ["Next.js", "Node.js", "MongoDB", "Stripe", "AWS"],
+      description: "Plataforma completa de comercio electrónico con panel administrativo, gestión de inventario y sistema de pagos integrado.",
+      features: ["Catálogo productos", "Pagos seguros", "Dashboard admin", "Analytics en tiempo real"],
+      status: "En desarrollo",
+      year: "2024",
+      category: "Web App",
+      githubUrl: "https://github.com/DiegoYepes05",
+      liveUrl: ""
+    },
+    {
+      id: 3,
+      title: "Portfolio Interactivo",
+      tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      description: "CV digital interactivo y responsive con animaciones suaves, diseño moderno y optimización para dispositivos móviles.",
+      features: ["Diseño moderno", "Animaciones suaves", "Totalmente responsive", "Alta performance"],
+      status: "Completado",
+      year: "2024",
+      category: "Portfolio",
+      githubUrl: "https://github.com/DiegoYepes05/CV-Diego",
+      liveUrl: ""
+    },
+    {
+      id: 4,
+      title: "Sistema de Gestión Empresarial",
+      tech: ["React", "NestJS", "PostgreSQL", "Docker"],
+      description: "Software completo para gestión empresarial desarrollado durante mi rol como Líder Técnico, desde requerimientos hasta despliegue.",
+      features: ["Gestión completa", "Despliegue AWS", "Clean Architecture", "Escalable"],
+      status: "Completado",
+      year: "2023",
+      category: "Enterprise Software",
+      githubUrl: "https://github.com/DiegoYepes05",
+      liveUrl: ""
+    }
+  ];
+
+  const references = [
+    {
+      name: "Juanita Pinzon Arias",
+      position: "Contadora",
+      phone: "+57 319 5483792"
+    },
+    {
+      name: "Mario Felipe Hurtado Nieto",
+      position: "Desarrollador senior full stack",
+      phone: "+57 317 2934436"
     }
   ];
 
   const contact = {
     email: "diegoyepes520@gmail.com",
-    phone: "+57 300 6378865",
+    phone: "+57 (300) 637-8865",
     location: "Medellín, Colombia",
     linkedin: "https://www.linkedin.com/in/diego-fernando-yepes-p%C3%A9rez-aab96a210/",
     github: "https://github.com/DiegoYepes05"
@@ -115,12 +203,13 @@ export default function Home() {
               { id: 'projects', label: 'Proyectos' },
               { id: 'skills', label: 'Habilidades' },
               { id: 'experience', label: 'Experiencia' },
+              { id: 'references', label: 'Referencias' },
               { id: 'contact', label: 'Contacto' }
             ].map(({ id, label }) => (
               <button
                 key={id}
                 onClick={() => setActiveSection(id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                className={`px-3 py-2 rounded-full text-xs font-medium transition-all ${
                   activeSection === id
                     ? 'bg-sky-600 text-white'
                     : 'text-gray-300 hover:text-white'
@@ -135,21 +224,78 @@ export default function Home() {
         {/* Content Sections */}
         <section className="pt-6 px-4 pb-16">
           {activeSection === 'projects' && (
-            <div className="grid grid-cols-3 grid-rows-2 gap-2 w-full">
-              {projects.map(({ title, tech, description, classes, col }) => (
-                <div
-                  key={title}
-                  className={`relative rounded-3xl overflow-hidden bg-gradient-to-br ${classes} border flex flex-col items-start hover:scale-105 hover:contrast-125 transition group ${col} p-7 min-h-[180px] cursor-pointer`}
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold text-center mb-6">Mis Proyectos</h3>
+              {projects.map((project) => (
+                <div 
+                  key={project.id} 
+                  className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700 hover:border-sky-500 transition-all group backdrop-blur-sm"
                 >
-                  <span className="absolute top-2 left-4 text-xs border rounded-xl px-2 py-1 bg-white/20">
-                    {tech}
-                  </span>
-                  <span className="absolute bottom-8 left-4 font-bold text-xl group-hover:-translate-y-1 transition-transform">
-                    {title}
-                  </span>
-                  <span className="absolute bottom-2 left-4 text-xs opacity-80">
-                    {description}
-                  </span>
+                  {/* Header del proyecto */}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex-1">
+                      <h4 className="text-lg font-bold text-white group-hover:text-sky-400 transition-colors">
+                        {project.title}
+                      </h4>
+                      <p className="text-gray-400 text-sm">{project.category} • {project.year}</p>
+                    </div>
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ml-3 flex-shrink-0 ${
+                      project.status === 'Completado' 
+                        ? 'bg-green-500/20 text-green-400 border border-green-500/30' 
+                        : 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
+                    }`}>
+                      {project.status}
+                    </span>
+                  </div>
+                  
+                  {/* Descripción */}
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{project.description}</p>
+                  
+                  {/* Tecnologías */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech) => (
+                      <span 
+                        key={tech} 
+                        className="bg-sky-600/20 text-sky-400 px-2 py-1 rounded-lg text-xs border border-sky-600/30"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {/* Características */}
+                  <div className="grid grid-cols-2 gap-2 mb-4">
+                    {project.features.map((feature) => (
+                      <div key={feature} className="flex items-center text-sm text-gray-400">
+                        <span className="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2 flex-shrink-0"></span>
+                        <span className="truncate">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Botones de acción */}
+                  <div className="flex space-x-3 pt-4 border-t border-gray-700">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
+                    >
+                      <span className="mr-2">⚡</span>
+                      GitHub
+                    </a>
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 bg-sky-600 hover:bg-sky-700 text-white py-2 px-4 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
+                      >
+                        <span className="mr-2">🌐</span>
+                        Ver Demo
+                      </a>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -158,20 +304,32 @@ export default function Home() {
           {activeSection === 'skills' && (
             <div className="space-y-4">
               <h3 className="text-xl font-bold text-center mb-6">Habilidades Técnicas</h3>
-              {skills.map(({ name, level, color }) => (
-                <div key={name} className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-sm font-medium">{name}</span>
-                    <span className="text-sm text-gray-400">{level}%</span>
+              <div className="grid grid-cols-2 gap-4">
+                {skills.map(({ name, level, color, icon, description }) => (
+                  <div 
+                    key={name} 
+                    className={`bg-gradient-to-br ${color} rounded-2xl p-4 text-white relative overflow-hidden group hover:scale-105 transition-all duration-300 cursor-pointer`}
+                  >
+                    <div className="relative z-10">
+                      <div className="text-2xl mb-2">{icon}</div>
+                      <h4 className="font-bold text-sm mb-1">{name}</h4>
+                      <p className="text-xs opacity-90 mb-2">{description}</p>
+                      <div className="flex items-center space-x-2">
+                        <div className="flex-1 bg-white/20 rounded-full h-1.5">
+                          <div 
+                            className="bg-white h-1.5 rounded-full transition-all duration-1000 ease-out"
+                            style={{ width: `${level}%` }}
+                          ></div>
+                        </div>
+                        <span className="text-xs font-medium">{level}%</span>
+                      </div>
+                    </div>
+                    <div className="absolute -right-4 -bottom-4 text-6xl opacity-10 group-hover:opacity-20 transition-opacity">
+                      {icon}
+                    </div>
                   </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
-                    <div
-                      className={`${color} h-2 rounded-full transition-all duration-1000 ease-out`}
-                      style={{ width: `${level}%` }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           )}
 
@@ -183,6 +341,21 @@ export default function Home() {
                   <h4 className="text-lg font-semibold text-sky-300">{title}</h4>
                   <p className="text-gray-400 text-sm">{company} • {period}</p>
                   <p className="text-gray-300 mt-2 text-sm">{description}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {activeSection === 'references' && (
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-center mb-6">Referencias</h3>
+              {references.map(({ name, position, phone }, index) => (
+                <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700">
+                  <h4 className="text-lg font-semibold text-sky-300">{name}</h4>
+                  <p className="text-gray-400 text-sm">{position}</p>
+                  <a href={`tel:${phone}`} className="text-gray-300 hover:text-green-300 transition-colors text-sm mt-2 inline-block">
+                    {phone}
+                  </a>
                 </div>
               ))}
             </div>
